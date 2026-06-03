@@ -1,0 +1,85 @@
+{
+    "title": "CP_OrangeHRM_FlujoLogin",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 981,
+            "height": 729,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+                    "title": "OrangeHRM"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input"
+                ]
+            ],
+            "offsetY": 18.837493896484375,
+            "offsetX": 72.94999694824219
+        },
+        {
+            "type": "change",
+            "value": "Admin",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input"
+                ]
+            ],
+            "offsetY": 16.637481689453125,
+            "offsetX": 85.94999694824219
+        },
+        {
+            "type": "change",
+            "value": "admin123",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button"
+                ]
+            ],
+            "offsetY": 17.63751220703125,
+            "offsetX": 158.9499969482422,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",
+                    "title": "OrangeHRM"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "title": "CP_OrangeHRM_FlujoDirectory_BuscarXNombreEmpleado",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 973,
+            "height": 729,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory",
+                    "title": "OrangeHRM"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/",
+                    "aria/[role=\"generic\"]"
+                ],
+                "div.oxd-table-filter-header i",
+                "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[2]/div[3]/button/i",
+                "pierce/div.oxd-table-filter-header i"
+            ],
+            "offsetX": 6.39996337890625,
+            "offsetY": 4.8000030517578125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input"
+                ]
+            ],
+            "offsetY": 18.099990844726562,
+            "offsetX": 12.199981689453125
+        },
+        {
+            "type": "change",
+            "value": "F",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "waitForElement",
+            "target": "main",
+            "selectors": [
+                "aria/Type for hints...",
+                "div.oxd-layout-container input",
+                "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input",
+                "pierce/div.oxd-layout-container input"
+            ]
+        },
+        {
+            "type": "change",
+            "value": "Fn",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "ArrowDown"
+        },
+        {
+            "type": "keyUp",
+            "key": "ArrowDown",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Enter"
+        },
+        {
+            "type": "keyUp",
+            "key": "Enter",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]"
+                ]
+            ],
+            "offsetY": 10.600006103515625,
+            "offsetX": 55.88751220703125
+        }
+    ]
+}

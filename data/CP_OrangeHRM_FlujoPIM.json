@@ -1,0 +1,206 @@
+{
+    "title": "CP_OrangeHRM_FlujoPIM",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 887,
+            "height": 729,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",
+                    "title": "OrangeHRM"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a/span"
+                ]
+            ],
+            "offsetY": 7.5999908447265625,
+            "offsetX": 27,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList",
+                    "title": "OrangeHRM"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button"
+                ]
+            ],
+            "offsetY": 15.600006103515625,
+            "offsetX": 81,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee",
+                    "title": "OrangeHRM"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/input"
+                ]
+            ],
+            "offsetY": 22.800003051757812,
+            "offsetX": 53
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Shift"
+        },
+        {
+            "type": "keyUp",
+            "key": "Shift",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Fname",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[2]/div[2]/input"
+                ]
+            ],
+            "offsetY": 21.800003051757812,
+            "offsetX": 29.92498779296875
+        },
+        {
+            "type": "change",
+            "value": "Mname",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[2]/div[2]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[3]/div[2]/input"
+                ]
+            ],
+            "offsetY": 26.800003051757812,
+            "offsetX": 55.86248779296875
+        },
+        {
+            "type": "change",
+            "value": "Lname",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[3]/div[2]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input"
+                ]
+            ],
+            "offsetY": 17.399993896484375,
+            "offsetX": 61
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input"
+                ]
+            ],
+            "offsetY": 20.399993896484375,
+            "offsetX": 1,
+            "duration": 552.6999998092651
+        },
+        {
+            "type": "change",
+            "value": "997",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input"
+                ]
+            ],
+            "offsetY": 20.399993896484375,
+            "offsetX": 22
+        },
+        {
+            "type": "change",
+            "value": "9997",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "xpath///*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]"
+                ]
+            ],
+            "offsetY": 17.39996337890625,
+            "offsetX": 49.79998779296875,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/262",
+                    "title": "OrangeHRM"
+                }
+            ]
+        }
+    ]
+}

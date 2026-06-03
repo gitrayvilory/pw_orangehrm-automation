@@ -1,0 +1,14 @@
+﻿{
+  "name": "orangehrm-playwright-pom",
+  "version": "1.0.0",
+  "description": "Proyecto de automatización para OrangeHRM usando Playwright, POM y Excel Multi-hoja",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "xlsx": "^0.18.5"
+  }
+}
