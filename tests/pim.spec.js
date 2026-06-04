@@ -12,16 +12,13 @@ test.describe('Flujo de Gestión de Empleados (PIM)', () => {
   const loginData = readExcelSheet(dataPath, 'Login')[0];
   const pimData = readExcelSheet(dataPath, 'PIM')[0];
 
-  test('Debería iniciar sesión y registrar el empleado (con manejo de ID duplicado)', async ({ page }) => {
-    const loginPage = new LoginPage(page);
+  test('Debería registrar el empleado (con manejo de ID duplicado)', async ({ page }) => {
     const dashboardPage = new DashboardPage(page);
     const pimPage = new PimPage(page);
 
-    // Flujo de Login
-    await loginPage.navigate(loginData.url);
-    await loginPage.login(loginData.username, loginData.password);
-    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
-
+    // 💡 YA NO HAY LOGIN. Entramos directo porque la sesión ya existe:
+     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
+    
     // Flujo PIM
     await dashboardPage.navigateToPimModule();
     await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList');
@@ -29,7 +26,7 @@ test.describe('Flujo de Gestión de Empleados (PIM)', () => {
     await pimPage.clickAddEmployee();
     await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee');
 
-    // Dentro de tu archivo de pruebas
+    // Dentro del dir de pruebas
     const imagePath = path.join(__dirname, '../data/Ray.jpg');
 
 
@@ -49,7 +46,7 @@ test.describe('Flujo de Gestión de Empleados (PIM)', () => {
       await page.getByText('Employee Id already exists').waitFor({ state: 'visible', timeout: 1500 });
       
       // Si el código llega aquí, significa que el error SÍ apareció
-      console.log('⚠️ El Employee Id ya existe. Dando clic en Cancelar...');
+      console.log('⚠️ Registro: El Employee Id ya existe. Dando clic en Cancelar...');
       
       // Hacemos clic en el botón Cancelar (usando su rol/nombre nativo en el DOM)
       await page.getByRole('button', { name: 'Cancel' }).click();
@@ -59,7 +56,7 @@ test.describe('Flujo de Gestión de Empleados (PIM)', () => {
 
     } catch (error) {
       // Si ocurre un 'timeout' en el waitFor, significa que el mensaje NO apareció (el ID está disponible)
-      console.log('✅ El ID está libre. Procediendo a guardar al empleado...');
+      console.log('✅ Registro: El ID está libre. Procediendo a guardar al empleado...');
       
       await pimPage.clickSave();
       await expect(page).toHaveURL(/.*\/pim\/viewPersonalDetails\/empNumber.*/);

@@ -1,12 +1,12 @@
 ﻿class PimPage {
   constructor(page) {
     this.page = page;
-    this.addEmployeeButton = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button');
-    this.firstNameInput = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/input');
-    this.middleNameInput = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[2]/div[2]/input');
-    this.lastNameInput = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[3]/div[2]/input');
-    this.employeeIdInput = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input');
-    this.saveButton = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]');
+    this.addEmployeeButton = page.getByRole('button', { name: 'Add' });
+    this.firstNameInput = page.locator('input[name="firstName"]');
+    this.middleNameInput = page.locator('input[name="middleName"]');
+    this.lastNameInput = page.locator('input[name="lastName"]');
+    this.employeeIdInput = page.locator('xpath=//div[div/label[text()="Employee Id"]]//input');
+    this.saveButton = page.locator('button:has-text("Save")');
   }
 
   async clickAddEmployee() {

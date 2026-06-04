@@ -5,7 +5,7 @@ module.exports = defineConfig({
   fullyParallel: false,
   reporter: 'html',
   // 1. TIMEOUT GLOBAL DEL TEST: El tiempo máximo que puede durar una prueba individual (ej. 30 segundos)
-  timeout: 30000,
+  timeout: 50000,
   use: {
     // 2. TIMEOUT DE ACCIÓN: El tiempo máximo que Playwright esperará por un clic, scroll o tipeo antes de fallar
     actionTimeout: 30000, // 30 segundos
@@ -18,24 +18,27 @@ module.exports = defineConfig({
     //trace: 'retain-on-failure',
     
   },
+  reporter: [['allure-playwright']],
   projects: [
-    // Definimos el Test 1 como el proyecto principal o inicial
     {
-      name: 'PrimerTest',
+      name: '1-Login',
       testMatch: /login\.spec\.js/,
     },
-        // Definimos el Test 2 y le creamos la dependencia del anterior
     {
-      name: 'SegundoTest',
+      name: '2-PIM',
       testMatch: /pim\.spec\.js/,
-      dependencies: ['PrimerTest'], 
-
+      dependencies: ['1-Login'], // 👈 No arranca hasta que '1-Login' termine con éxito
+      use: {
+        storageState: 'playwright/.auth/user.json', // 👈 Reutiliza la sesión guardada
+      },
     },
-    // Definimos el Test 3 y le creamos la dependencia del anterior
     {
-      name: 'TercerTest',
+      name: '3-Directory',
       testMatch: /directory\.spec\.js/,
-      dependencies: ['SegundoTest'], 
+      dependencies: ['2-PIM'], // 👈 No arranca hasta que '2-PIM' termine
+      use: {
+        storageState: 'playwright/.auth/user.json', // 👈 Reutiliza la misma sesión
+      },
     },
   ],
 });

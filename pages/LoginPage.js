@@ -1,9 +1,9 @@
 ﻿class LoginPage {
   constructor(page) {
     this.page = page;
-    this.usernameInput = page.locator('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input');
-    this.passwordInput = page.locator('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input');
-    this.loginButton = page.locator('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button');
+    this.usernameInput = page.getByPlaceholder('Username');
+    this.passwordInput = page.getByPlaceholder('Password');
+    this.loginButton = page.locator('.orangehrm-login-button');
   }
 
   async navigate(url) {

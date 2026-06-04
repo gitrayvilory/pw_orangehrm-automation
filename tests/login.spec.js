@@ -14,5 +14,9 @@ test.describe('Flujo de Autenticación en OrangeHRM', () => {
     await loginPage.login(loginData.username, loginData.password);
 
     await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
+          console.log('✅ Login: Exitoso... guardando la sesión...');
+
+    // 🔴 LA LÍNEA CLAVE: Guarda el estado de la sesión
+  await page.context().storageState({ path: 'playwright/.auth/user.json' });
   });
 });

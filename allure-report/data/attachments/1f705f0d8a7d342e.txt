@@ -1,0 +1,3 @@
+Validación PRE-headerLocator: "locator('.orangehrm-directory-card-header').filter({ hasText: 'firstName middleName lastName' })" 
+Validación PRE-nombreLimpio: "firstname middlename lastname" 
+✅ Búsqueda: Validación exitosa: "firstname middlename lastname" coincide con el buscado.

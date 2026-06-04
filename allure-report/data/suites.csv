@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8795","Debería iniciar sesión de forma exitosa usando credenciales válidas","1-Login","2026-06-04","passed","2026-06-04","Flujo de Autenticación en OrangeHRM","login.spec.js","",""
+"","24260","Debería registrar el empleado (con manejo de ID duplicado)","2-PIM","2026-06-04","passed","2026-06-04","Flujo de Gestión de Empleados (PIM)","pim.spec.js","",""
+"","12582","Debería buscar un empleado","3-Directory","2026-06-04","passed","2026-06-04","Flujo de Directorio - Buscar por Nombre de Empleado","directory.spec.js","",""

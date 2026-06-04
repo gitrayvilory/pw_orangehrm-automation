@@ -6,9 +6,10 @@
     this.page = page;
 
     // Selectores XPath extraídos estrictamente de tu JSON
-    this.directoryButton = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[2]/div[3]/button');
-    this.employeeNameInput = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input');
-    this.searchButton = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]');
+    this.directoryButton = page.locator("xpath=//button[i[contains(@class, 'bi-caret-down-fill')]]");
+    this.employeeNameInput = page.locator("xpath=//input[@placeholder='Type for hints...']")//page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input');
+    this.searchButton = page.locator('button:has-text("Search")');
+    //this.searchResultText = page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div/div[2]/div/div/input');
   }
 
   /**
